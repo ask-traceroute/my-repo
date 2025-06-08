@@ -4,6 +4,6 @@ jobs:
   practice:
     runs-on: ubuntu-latest
     env:
-      URLS: ${{ join(github.*.url, ',')}}
+      URLS: ${{ join(github.*.html_url, ',')}}
     steps:
       - run: echo "${URLS}"
