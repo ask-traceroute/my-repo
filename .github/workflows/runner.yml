@@ -1,0 +1,11 @@
+name: Runner
+on: push
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "OS: ${{ runner.os }}"
+          echo "Arch: ${{ runner.arch }}"
+      - run: cd ${{ runner.temp }}
+      - run: ls -la
