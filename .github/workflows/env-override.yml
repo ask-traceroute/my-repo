@@ -1,7 +1,7 @@
 name: Environment variables override
 on: push
 env:
-  EXAMLPLE: "ワークフローレベルの定義"
+  EXAMPLE: "ワークフローレベルの定義"
 jobs:
   print:
     runs-on: ubuntu-latest
