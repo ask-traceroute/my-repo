@@ -1,0 +1,9 @@
+name: Compare functions
+on: push
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    env:
+      CONTAINS_FUNC: ${{ contains(github.event.issue.labels.*.name, 'bug')}}
+    steps:
+      - run: printenv | grep "_FUNC"
