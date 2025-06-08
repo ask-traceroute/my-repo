@@ -1,0 +1,10 @@
+name: Naming
+run-name: Run by @${{ github.actor }}
+on: push
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    name: Super Script
+    steps:
+      - run: echo "Hello"
+        name: Hello World
