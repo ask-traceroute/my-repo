@@ -15,5 +15,5 @@ jobs:
       - run: echo "${LITERAL_NUMBER}"
       - run: echo "${LITERAL_STRING}"
       - run: echo "${LITERAL_STRING2}"
-      - run: echo "${{ github.event.*.html_url }}"
+      - run: echo "${{ toJSON(github.event.*.html_url) }}"
       
