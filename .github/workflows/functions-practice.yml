@@ -1,0 +1,9 @@
+name: Functions Practice
+on: push
+jobs:
+  practice:
+    runs-on: ubuntu-latest
+    env:
+      URLS: ${{ join(contains(github.*, 'url'), ',')}}
+    steps:
+      - run: echo "${URLS}"
