@@ -1,0 +1,19 @@
+name: Literals
+on: push
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    env:
+      LITERAL_NULL: ${{ null }}
+      LITERAL_BOOLEAN: ${{ true }}
+      LITERAL_NUMBER: ${{ 123 }}
+      LITERAL_STRING: Hello World
+      LITERAL_STRING2: ${{ 'hello' }}
+    steps:
+      - run: echo "${LITERAL_NULL}"
+      - run: echo "${LITERAL_BOOLEAN}"
+      - run: echo "${LITERAL_NUMBER}"
+      - run: echo "${LITERAL_STRING}"
+      - run: echo "${LITERAL_STRING2}"
+      - run: echo "${{ github.event.*.html_url }}"
+      
