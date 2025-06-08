@@ -1,2 +1,8 @@
 name: Invalid
 on: workflow_dispatch
+jobs:
+  hello:
+    timeout-minutes: 2
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello, world"
