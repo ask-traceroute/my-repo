@@ -1,0 +1,12 @@
+name: Environment variables override
+on: push
+env:
+  EXAMLPLE: "ワークフローレベルの定義"
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${EXAMPLE}"
+      - env:
+          EXAMPLE: "オーバーライド"
+        run: echo "${EXAMPLE}"
