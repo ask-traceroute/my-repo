@@ -4,7 +4,7 @@ jobs:
   log:
     runs-on: ubuntu-latest
     env:
-      PASSWORD: SuperSecret
+      SEACRET_SOMETHING: SuperSecret
     steps:
-      - run: echo "::add-mask::${PASSWORD}"
-      - run: echo "${PASSWORD}"
+      - run: echo "::add-mask::${SEACRET_SOMETHING}"
+      - run: echo "${SEACRET_SOMETHING}"
