@@ -1,0 +1,12 @@
+name: Annotation
+on: push
+jobs:
+  log:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Error
+        run: echo "::error::Thi is an error"
+      - name: Warning
+        run: echo "::warnign::This is a warning"
+      - name: Notice
+        run: echo "::notice::This is a notice"
