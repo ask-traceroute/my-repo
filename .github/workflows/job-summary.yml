@@ -1,0 +1,12 @@
+name: Job Summary
+on: push
+jobs:
+  log:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "## Example job summary" >> "${GITHUB_STEP_SUMMARY}"
+          echo "This is a test job summary" >> "${GITHUB_STEP_SUMMARY}"
+          echo "- first item" >> "${GITHUB_STEP_SUMMARY}"
+          echo "- second item" >> "${GITHUB_STEP_SUMMARY}"
+          
