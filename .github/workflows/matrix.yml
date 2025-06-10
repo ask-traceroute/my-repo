@@ -1,0 +1,15 @@
+name: Matrix
+on: push
+jobs:
+  matrixjob:
+    strategy:
+      matrix:
+        version: [18, 20]
+        msg: [hello, world]
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          VERSION: ${{ matrix.version }}
+          MSG: ${{ matrix.msg }}
+        run: echo "version is ${VERSION} and msg is ${MSG}"
+      
