@@ -11,7 +11,7 @@ jobs:
             version: 20
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/setup-node@v5
+      - uses: actions/setup-node@v6
         with:
           node-version: ${{ matrix.version }}
       - run: echo "OS is ${RUNNER_OS}" && node --version
